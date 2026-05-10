@@ -279,7 +279,7 @@ ul { list-style: none; }
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    105deg,
+    135deg,
     rgba(12,12,12,0.92) 0%,
     rgba(12,12,12,0.75) 50%,
     rgba(12,12,12,0.3) 100%
