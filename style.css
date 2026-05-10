@@ -12,9 +12,9 @@ html { scroll-behavior: smooth; font-size: 16px; }
   --bg:       #0c0c0c;
   --bg2:      #141414;
   --bg3:      #1e1e1e;
-  --text:     #d4f4f8;
+  --text:     #f0fdff;
   --muted:    #888880;
-  --accent:   #53d4c3;
+  --accent:   #8dc2bb;
   --accent2:  #b8fff6;
   --border:   rgba(255,255,255,0.08);
   --shadow:   0 8px 40px rgba(0,0,0,0.5);
