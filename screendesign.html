@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Screendesign App – Portfolio Vevi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="project-page.css" />
+</head>
+<body>
+
+  <header class="nav scrolled" id="nav">
+    <div class="nav__inner">
+      <a href="../index.html" class="nav__logo"><img src="https://framerusercontent.com/images/b9ZCE5JYeGoM2Pk2gWdWKbPfoY4.png" alt="Vevi Logo" /></a>
+      <nav class="nav__links">
+        <a href="../index.html#about-me">Über mich</a>
+        <a href="../index.html#gallery" class="active">Projekte</a>
+        <a href="../index.html#foto">Galerie</a>
+        <a href="../index.html#contact">Kontakt</a>
+      </nav>
+      <div class="nav__lang"><span class="lang-active">DE</span><span class="lang-sep">|</span><a href="../en/" class="lang-link">EN</a></div>
+      <button class="nav__burger" id="burgerBtn" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu__close" id="mobileClose">✕</button>
+    <nav class="mobile-menu__links">
+      <a href="../index.html" class="mobile-link">Home</a>
+      <a href="../index.html#gallery" class="mobile-link">Projekte</a>
+      <a href="../index.html#contact" class="mobile-link">Kontakt</a>
+    </nav>
+  </div>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <div class="breadcrumb__inner">
+          <a href="../index.html">Home</a><span class="breadcrumb__sep">›</span>
+          <a href="../index.html#gallery">Projekte</a><span class="breadcrumb__sep">›</span>
+          <span>Screendesign – App</span>
+        </div>
+      </nav>
+    </div>
+
+    <section class="proj-hero">
+      <div class="container">
+        <div class="proj-hero__tags">
+          <span class="project__tag">1. Semester</span>
+          <span class="project__tag">Screen Design</span>
+          <span class="project__tag">Adobe Illustrator</span>
+        </div>
+        <h1 class="proj-hero__title reveal-up">Screendesign – App</h1>
+        <div class="proj-hero__meta reveal-up delay-1">
+          <div class="proj-meta-item"><span class="proj-meta-label">Semester</span><span class="proj-meta-value">1. Semester</span></div>
+          <div class="proj-meta-item"><span class="proj-meta-label">Tool</span><span class="proj-meta-value">Adobe Illustrator</span></div>
+          <div class="proj-meta-item"><span class="proj-meta-label">Typ</span><span class="proj-meta-value">Einzelarbeit</span></div>
+          <div class="proj-meta-item"><span class="proj-meta-label">Stile</span><span class="proj-meta-value">3 UI-Stile</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="proj-content">
+      <div class="container">
+
+        <div class="proj-section reveal-up">
+          <div class="proj-section__label">Aufgabenstellung</div>
+          <h2 class="proj-section__title">Eine App in drei verschiedenen UI-Stilen</h2>
+          <p>Die Aufgabe bestand darin, eine App in verschiedenen UI-Stilen zu gestalten. Hierfür recherchierte ich erst aktuelle Trends sowie auch eher außergewöhnliche Styles, dabei entschied ich mich für:</p>
+          <ul>
+            <li><strong>Retro Futurism</strong> – Nostalgische Ästhetik mit futuristischen Elementen</li>
+            <li><strong>Dark Mode</strong> – Moderner dunkler Look mit hohem Kontrast</li>
+            <li><strong>Bauhaus</strong> – Geometrisch, funktional, auf das Wesentliche reduziert</li>
+          </ul>
+        </div>
+
+        <div class="proj-section reveal-up">
+          <div class="proj-section__label">Prozess</div>
+          <h2 class="proj-section__title">Moodboard → Nachbau → Stilanpassung</h2>
+          <p>Zuerst erstellte ich zu jedem Stil ein Moodboard, suchte mir eine passende Applikation – welche ich zunächst in Illustrator nachgebaut habe – und passte schließlich das Screendesign den entsprechenden Stilen an.</p>
+          <p>Als Basis diente das originale App-Design, das dann dreifach transformiert wurde.</p>
+        </div>
+
+        <div class="proj-section reveal-up">
+          <div class="proj-section__label">Ergebnis</div>
+          <h2 class="proj-section__title">Die vier Styles im Vergleich</h2>
+          <div class="proj-style-grid">
+            <div class="proj-style-card">
+              <img src="https://framerusercontent.com/images/IfJc5o8cqPdDnirEYphRJ2InhY.png" alt="Original" />
+              <span>Original</span>
+            </div>
+            <div class="proj-style-card">
+              <img src="https://framerusercontent.com/images/7i2QCDAvbE3nuopqDnM7VnyOK8.png" alt="Retro Futurism" />
+              <span>Retro Futurism</span>
+            </div>
+            <div class="proj-style-card">
+              <img src="https://framerusercontent.com/images/UxjcoCgtYeL9xXJMrFvBHlPuEts.png" alt="Dark Mode" />
+              <span>Dark Mode</span>
+            </div>
+            <div class="proj-style-card">
+              <img src="https://framerusercontent.com/images/Kkr3543Q5LXbzZV7M77x7kwE1O0.png" alt="Bauhaus" />
+              <span>Bauhaus</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container">
+      <nav class="proj-nav" aria-label="Projekt Navigation">
+        <div class="proj-nav__inner">
+          <a href="icondesign.html" class="proj-nav__link">
+            <span class="proj-nav__label">← Vorheriges Projekt</span>
+            <span class="proj-nav__title">Icondesign</span>
+          </a>
+          <a href="drucker.html" class="proj-nav__link proj-nav__link--next">
+            <span class="proj-nav__label">Nächstes Projekt →</span>
+            <span class="proj-nav__title">Drucker-Interface Redesign</span>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <img src="https://framerusercontent.com/images/b9ZCE5JYeGoM2Pk2gWdWKbPfoY4.png" alt="Vevi Logo" class="footer__logo" />
+        <p>© Verena Ostermeier | 2026</p>
+        <nav class="footer__links">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#gallery">Projekte</a>
+          <a href="../index.html#contact">Kontakt</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+    <button class="lightbox__close" id="lightboxClose">✕</button>
+    <button class="lightbox__prev" id="lightboxPrev">‹</button>
+    <button class="lightbox__next" id="lightboxNext">›</button>
+    <div class="lightbox__content"><img src="" alt="" id="lightboxImg" /></div>
+  </div>
+  <script src="../script.js"></script>
+</body>
+</html>
