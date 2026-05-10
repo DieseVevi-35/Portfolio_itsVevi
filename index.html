@@ -13,8 +13,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="flipbook.css" />
 </head>
 <body>
+
+<script src="flipbook.js"></script>
 
   <!-- ===================== NAV ===================== -->
   <header class="nav" id="nav">
@@ -94,11 +97,11 @@
               </p>
             </div>
             <div class="about__cv reveal-up delay-3">
-              <a href="https://framerusercontent.com/assets/aoTLAkrfBnKIbB0RiR0wrBbwAdM.pdf" class="btn btn--primary" target="_blank" download> //Lebenslauf Deutsch
+              <a href="https://framerusercontent.com/assets/aoTLAkrfBnKIbB0RiR0wrBbwAdM.pdf" class="btn btn--primary" target="_blank" download> <!--Lebenslauf Deutsch -->
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                 Lebenslauf – Deutsch
               </a>
-              <a href="https://framerusercontent.com/assets/VfPUjR1lFQFQyMZmuW4cUgMo.pdf" class="btn btn--ghost" target="_blank" download> // CV - English
+              <a href="https://framerusercontent.com/assets/VfPUjR1lFQFQyMZmuW4cUgMo.pdf" class="btn btn--ghost" target="_blank" download> <!--CV - English -->
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                 Lebenslauf – Englisch
               </a>
@@ -122,6 +125,32 @@
       <div class="container">
         <div class="section-label reveal-up">Arbeiten</div>
         <h2 class="projects__title reveal-up delay-1">Meine Projekte</h2>
+
+
+
+
+      <section class="flipbook-section section" id="booklets">
+      <div class="container">
+      <div class="section-label">Booklets</div>
+      <h2 class="projects__title">Semester-Zusammenfassungen</h2>
+      <div class="flipbook-grid">
+
+        <div id="book1" data-flipbook="https://ik.imagekit.io/Vevi/Portfolio/Studium/Verena%20Ostermeier%20-%20Booklet%201.%20Semester.pdf?updatedAt=1778407117774"
+           data-title="1.Semester – UX Design"
+           data-tag="Zusammenfassung ine einem Booklet"
+           data-desc="Nutzerforschung, Prototyping, Usability">
+        </div>
+
+        <div id="book2" data-flipbook="https://ik.imagekit.io/Vevi/Portfolio/Studium/03_Booklet%20-%202.%20Semester%20%20-%20komprimiert.pdf?updatedAt=1778407212193"
+           data-title="Icondesign Booklet"
+           data-tag="UI Design"
+           data-desc="Kinder & One-Line Style">
+        </div>
+
+      </div>
+      </div>
+      </section>
+
 
         <!-- Project 1: Icondesign -->
         <article class="project reveal-up delay-2">
