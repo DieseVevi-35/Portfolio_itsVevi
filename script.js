@@ -235,3 +235,26 @@ style.textContent = `
 }
 `;
 document.head.appendChild(style);
+
+
+/* ---- ladeSeite Funktion für Drucker-Seite ---- */
+// Funktion zum dynamischen Laden der Unterseiten
+function ladeSeite(seite) {
+    fetch(seite)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Fehler beim Laden der Seite');
+            }
+            return response.text();
+        })
+        .then(daten => {
+            document.getElementById('hauptinhalt').innerHTML = daten;
+        })
+        .catch(fehler => {
+            console.error('Fehler:', fehler);
+            document.getElementById('hauptinhalt').innerHTML = '<h2>Seite nicht gefunden</h2>';
+        });
+}
+
+// Lade die Startseite standardmäßig beim ersten Aufruf
+ladeSeite('startseite.html');
