@@ -37,7 +37,7 @@
   const burger = document.getElementById('burgerBtn');
   const menu   = document.getElementById('mobileMenu');
   const close  = document.getElementById('mobileClose');
-  const mLinks = document.querySelectorAll('.mobile-link');
+  const mLinks = document.querySelectorAll('.mobile-link:not(.mobile-dropdown__toggle)');
 
   function openMenu() {
     menu.classList.add('open');
