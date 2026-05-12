@@ -28,9 +28,17 @@
       <nav class="nav__links" id="navLinks">
         <a href="#home">Home</a>
         <a href="#about-me">Über mich</a>
-        <li><a href="#drucker" onclick="ladeSeite('drucker.html')">Drucker</a></li>
-        <a href="#gallery">Gallerie</a>
-        <a href="#contact">Kontakt</a>
+        <div class="nav__dropdown">
+          <button class="nav__dropdown-toggle">Studentische Projekte <span class="nav__dropdown-arrow">▾</span></button>
+          <ul class="nav__dropdown-menu">
+            <li><a href="drucker.html">Drucker</a></li>
+            <li><a href="icondesign.html">Icondesign</a></li>
+            <li><a href="jyoti.html">Jyoti</a></li>
+            <li><a href="screendesign.html">Screendesign</a></li>
+          </ul>
+        </div>
+        <a href="#foto">Fotografie</a>
+        <a href="#social-media">Social Media</a>
       </nav>
       <button class="nav__burger" id="burgerBtn" aria-label="Menü öffnen">
         <span></span><span></span><span></span>
@@ -44,8 +52,17 @@
     <nav class="mobile-menu__links">
       <a href="#home" class="mobile-link">Home</a>
       <a href="#about-me" class="mobile-link">Über mich</a>
-      <a href="#gallery" class="mobile-link">Gallerie</a>
-      <a href="#contact" class="mobile-link">Kontakt</a>
+      <div class="mobile-dropdown">
+        <button class="mobile-link mobile-dropdown__toggle">Studentische Projekte <span class="mobile-dropdown__arrow">▾</span></button>
+        <div class="mobile-dropdown__items" id="mobileSubLinks">
+          <a href="drucker.html" class="mobile-sublink">Drucker</a>
+          <a href="icondesign.html" class="mobile-sublink">Icondesign</a>
+          <a href="jyoti.html" class="mobile-sublink">Jyoti</a>
+          <a href="screendesign.html" class="mobile-sublink">Screendesign</a>
+        </div>
+      </div>
+      <a href="#foto" class="mobile-link">Fotografie</a>
+      <a href="#social-media" class="mobile-link">Social Media</a>
     </nav>
   </div>
 

@@ -68,6 +68,17 @@
   });
 })();
 
+/* ---- MOBILE DROPDOWN (Studentische Projekte) ---- */
+(function () {
+  const toggle = document.querySelector('.mobile-dropdown__toggle');
+  const items  = document.getElementById('mobileSubLinks');
+  if (!toggle || !items) return;
+  toggle.addEventListener('click', () => {
+    const open = items.classList.toggle('open');
+    toggle.classList.toggle('active', open);
+  });
+})();
+
 /* ---- SCROLL REVEAL (Intersection Observer) ---- */
 (function () {
   const revealEls = document.querySelectorAll('.reveal-up, .reveal-right');
