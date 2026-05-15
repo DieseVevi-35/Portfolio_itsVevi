@@ -6,28 +6,64 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../style.css" />
-  <link rel="stylesheet" href="project-page.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="project-pages.css" />
 </head>
 <body>
+
+  <header class="nav scrolled" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <img src="https://framerusercontent.com/images/b9ZCE5JYeGoM2Pk2gWdWKbPfoY4.png" alt="Vevi Logo" />
+      </a>
+      <nav class="nav__links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="index.html#about-me">Über mich</a>
+        <div class="nav__dropdown">
+          <button class="nav__dropdown-toggle">Studentische Projekte <span class="nav__dropdown-arrow">▾</span></button>
+          <ul class="nav__dropdown-menu">
+            <li><a href="drucker.html" class="active">Drucker</a></li>
+            <li><a href="icondesign.html">Icondesign</a></li>
+            <li><a href="jyoti.html">Jyoti</a></li>
+            <li><a href="screendesign.html">Screendesign</a></li>
+          </ul>
+        </div>
+        <a href="index.html#foto">Fotografie</a>
+        <a href="index.html#social-media">Social Media</a>
+      </nav>
+      <button class="nav__burger" id="burgerBtn" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
   <div class="mobile-menu" id="mobileMenu">
-    <button class="mobile-menu__close" id="mobileClose">✕</button>
+    <button class="mobile-menu__close" id="mobileClose" aria-label="Menü schließen">✕</button>
     <nav class="mobile-menu__links">
-      <a href="../index.html" class="mobile-link">Home</a>
-      <a href="../index.html#gallery" class="mobile-link">Projekte</a>
-      <a href="../index.html#contact" class="mobile-link">Kontakt</a>
+      <a href="index.html" class="mobile-link">Home</a>
+      <a href="index.html#about-me" class="mobile-link">Über mich</a>
+      <div class="mobile-dropdown">
+        <button class="mobile-link mobile-dropdown__toggle">Studentische Projekte <span class="mobile-dropdown__arrow">▾</span></button>
+        <div class="mobile-dropdown__items" id="mobileSubLinks">
+          <a href="drucker.html" class="mobile-sublink">Drucker</a>
+          <a href="icondesign.html" class="mobile-sublink">Icondesign</a>
+          <a href="jyoti.html" class="mobile-sublink">Jyoti</a>
+          <a href="screendesign.html" class="mobile-sublink">Screendesign</a>
+        </div>
+      </div>
+      <a href="index.html#foto" class="mobile-link">Fotografie</a>
+      <a href="index.html#social-media" class="mobile-link">Social Media</a>
     </nav>
   </div>
 
   <main>
     <div class="container">
-      <nav class="breadcrumb" aria-label="Breadcrumb">
-        <div class="breadcrumb__inner">
-          <!--<a href="../index.html">Home</a><span class="breadcrumb__sep">›</span> -->
-          <a href="../index.html#drucker">Projekte</a><span class="breadcrumb__sep">›</span>
-          <span>Drucker-Interface Redesign</span>
-        </div>
-      </nav>
+      <div class="proj-topbar">
+        <a href="index.html" class="btn btn--ghost btn--sm">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+          Zurück zur Startseite
+        </a>
+      </div>
     </div>
 
     <section class="proj-hero">
@@ -94,13 +130,19 @@
     <div class="container">
       <nav class="proj-nav" aria-label="Projekt Navigation">
         <div class="proj-nav__inner">
-          <a href="screendesign.html" class="proj-nav__link">
-            <span class="proj-nav__label">← Vorheriges Projekt</span>
-            <span class="proj-nav__title">Screendesign – App</span>
+          <a href="screendesign.html" class="proj-nav__btn proj-nav__btn--prev">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+            <span class="proj-nav__btn-text">
+              <span class="proj-nav__label">Vorheriges Projekt</span>
+              <span class="proj-nav__title">Screendesign – App</span>
+            </span>
           </a>
-          <a href="jyoti.html" class="proj-nav__link proj-nav__link--next">
-            <span class="proj-nav__label">Nächstes Projekt →</span>
-            <span class="proj-nav__title">Jyoti – Demenz & Design</span>
+          <a href="jyoti.html" class="proj-nav__btn proj-nav__btn--next">
+            <span class="proj-nav__btn-text">
+              <span class="proj-nav__label">Nächstes Projekt</span>
+              <span class="proj-nav__title">Jyoti – Demenz & Design</span>
+            </span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
         </div>
       </nav>
@@ -113,9 +155,9 @@
         <img src="https://framerusercontent.com/images/b9ZCE5JYeGoM2Pk2gWdWKbPfoY4.png" alt="Vevi Logo" class="footer__logo" />
         <p>© Verena Ostermeier | 2026</p>
         <nav class="footer__links">
-          <a href="../index.html">Home</a>
-          <a href="../index.html#gallery">Projekte</a>
-          <a href="../index.html#contact">Kontakt</a>
+          <a href="index.html">Home</a>
+          <a href="index.html#about-me">Über mich</a>
+          <a href="index.html#contact">Kontakt</a>
         </nav>
       </div>
     </div>
@@ -127,6 +169,7 @@
     <button class="lightbox__next" id="lightboxNext">›</button>
     <div class="lightbox__content"><img src="" alt="" id="lightboxImg" /></div>
   </div>
-  <script src="../script.js"></script>
+
+  <script src="script.js"></script>
 </body>
 </html>

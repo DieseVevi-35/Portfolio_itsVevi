@@ -267,5 +267,5 @@ function ladeSeite(seite) {
         });
 }
 
-// Lade die Startseite standardmäßig beim ersten Aufruf
-ladeSeite('startseite.html');
+// Lade die Startseite standardmäßig beim ersten Aufruf (nur wenn Container vorhanden)
+if (document.getElementById('hauptinhalt')) ladeSeite('startseite.html');
