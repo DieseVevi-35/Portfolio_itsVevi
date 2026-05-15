@@ -125,103 +125,109 @@
 
 /* ---- LIGHTBOX ---- */
 (function () {
-  const lightbox  = document.getElementById('lightbox');
-  const lbImg     = document.getElementById('lightboxImg');
-  const lbClose   = document.getElementById('lightboxClose');
-  const lbPrev    = document.getElementById('lightboxPrev');
-  const lbNext    = document.getElementById('lightboxNext');
+  const lightbox = document.getElementById('lightbox');
+  const lbImg    = document.getElementById('lightboxImg');
+  const lbClose  = document.getElementById('lightboxClose');
+  const lbPrev   = document.getElementById('lightboxPrev');
+  const lbNext   = document.getElementById('lightboxNext');
 
-  let zoomableImgs = [];
-  let currentIndex = 0;
+  if (!lightbox) return;
 
-  function buildImageList() {
-    zoomableImgs = Array.from(
-      document.querySelectorAll(
-        '.project__img, .style-card img, .phase-card img, .foto__item img, .storyboard-img'
-      )
-    );
+  // Selector for all zoomable images — extend here as needed
+  const ZOOM_SEL = [
+    '.project__img',
+    '.style-card img',
+    '.phase-card img',
+    '.phase-imgs img',
+    '.foto__item img',
+    '.storyboard-img',
+    '.print-img',
+    '.logo-img',
+    '.proj-img',
+    '.proj-style-card img'
+  ].join(', ');
+
+  let imgs = [];
+  let cur  = 0;
+
+  // Rebuild each time — catches hidden/dynamic images correctly
+  function buildList() {
+    imgs = Array.from(document.querySelectorAll(ZOOM_SEL))
+               .filter(img => img.offsetParent !== null && img.src && !img.src.endsWith('#'));
   }
 
-  function openLightbox(index) {
-    currentIndex = index;
-    lbImg.src = zoomableImgs[currentIndex].src;
-    lbImg.alt = zoomableImgs[currentIndex].alt || '';
+  function open(index) {
+    cur = index;
+    lbImg.src = imgs[cur].src;
+    lbImg.alt = imgs[cur].alt || '';
     lightbox.classList.add('open');
     document.body.style.overflow = 'hidden';
-    updateNav();
+    syncNav();
   }
 
-  function closeLightbox() {
+  function close() {
     lightbox.classList.remove('open');
     document.body.style.overflow = '';
     lbImg.src = '';
   }
 
-  function showPrev() {
-    currentIndex = (currentIndex - 1 + zoomableImgs.length) % zoomableImgs.length;
+  function prev() {
+    cur = (cur - 1 + imgs.length) % imgs.length;
+    fade(() => { lbImg.src = imgs[cur].src; lbImg.alt = imgs[cur].alt || ''; });
+    syncNav();
+  }
+
+  function next() {
+    cur = (cur + 1) % imgs.length;
+    fade(() => { lbImg.src = imgs[cur].src; lbImg.alt = imgs[cur].alt || ''; });
+    syncNav();
+  }
+
+  function fade(cb) {
     lbImg.style.opacity = '0';
-    setTimeout(() => {
-      lbImg.src = zoomableImgs[currentIndex].src;
-      lbImg.alt = zoomableImgs[currentIndex].alt || '';
-      lbImg.style.opacity = '1';
-    }, 150);
-    updateNav();
+    setTimeout(() => { cb(); lbImg.style.opacity = '1'; }, 150);
   }
 
-  function showNext() {
-    currentIndex = (currentIndex + 1) % zoomableImgs.length;
-    lbImg.style.opacity = '0';
-    setTimeout(() => {
-      lbImg.src = zoomableImgs[currentIndex].src;
-      lbImg.alt = zoomableImgs[currentIndex].alt || '';
-      lbImg.style.opacity = '1';
-    }, 150);
-    updateNav();
+  function syncNav() {
+    const show = imgs.length > 1 ? '' : 'none';
+    lbPrev.style.display = show;
+    lbNext.style.display = show;
   }
 
-  function updateNav() {
-    lbPrev.style.display = zoomableImgs.length > 1 ? '' : 'none';
-    lbNext.style.display = zoomableImgs.length > 1 ? '' : 'none';
-  }
-
-  // Add smooth transition to lightbox img
   lbImg.style.transition = 'opacity 0.15s ease';
 
-  buildImageList();
-
-  // Attach click handlers to all zoomable images
-  zoomableImgs.forEach((img, idx) => {
-    img.addEventListener('click', () => openLightbox(idx));
+  // Event delegation — works for all images regardless of when they were rendered
+  document.addEventListener('click', (e) => {
+    const img = e.target.closest('img');
+    if (!img || !img.matches(ZOOM_SEL)) return;
+    buildList();
+    const idx = imgs.indexOf(img);
+    if (idx !== -1) open(idx);
   });
 
-  lbClose.addEventListener('click', closeLightbox);
-  lbPrev.addEventListener('click', showPrev);
-  lbNext.addEventListener('click', showNext);
+  lbClose.addEventListener('click', close);
+  lbPrev.addEventListener('click', prev);
+  lbNext.addEventListener('click', next);
 
-  // Click outside image to close
+  // Click backdrop to close
   lightbox.addEventListener('click', (e) => {
-    if (e.target === lightbox) closeLightbox();
+    if (e.target === lightbox || e.target === lbImg.parentElement) close();
   });
 
-  // Keyboard navigation
+  // Keyboard
   document.addEventListener('keydown', (e) => {
     if (!lightbox.classList.contains('open')) return;
-    if (e.key === 'Escape') closeLightbox();
-    if (e.key === 'ArrowLeft') showPrev();
-    if (e.key === 'ArrowRight') showNext();
+    if (e.key === 'Escape')      close();
+    if (e.key === 'ArrowLeft')   prev();
+    if (e.key === 'ArrowRight')  next();
   });
 
-  // Touch swipe support
-  let touchStartX = 0;
-  lightbox.addEventListener('touchstart', (e) => {
-    touchStartX = e.changedTouches[0].clientX;
-  }, { passive: true });
-  lightbox.addEventListener('touchend', (e) => {
-    const dx = e.changedTouches[0].clientX - touchStartX;
-    if (Math.abs(dx) > 50) {
-      if (dx < 0) showNext();
-      else showPrev();
-    }
+  // Touch swipe
+  let tx = 0;
+  lightbox.addEventListener('touchstart', (e) => { tx = e.changedTouches[0].clientX; }, { passive: true });
+  lightbox.addEventListener('touchend',   (e) => {
+    const dx = e.changedTouches[0].clientX - tx;
+    if (Math.abs(dx) > 50) dx < 0 ? next() : prev();
   }, { passive: true });
 })();
 
