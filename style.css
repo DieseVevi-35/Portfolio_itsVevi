@@ -859,6 +859,58 @@ ul { list-style: none; }
 .foto__item:hover figcaption { opacity: 1; }
 .foto__item.hidden { display: none; }
 
+/* Fotografie sub-sections (Privat / Studentisches Fach) */
+.foto__sub-section { margin-top: 4rem; }
+.foto__sub-title {
+  font-family: var(--ff-display);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+.foto__sub-divider {
+  width: 40px;
+  height: 1px;
+  background: var(--accent);
+  margin-bottom: 2rem;
+}
+
+/* Studentisches Fach blocks (Abgaben, Freies Bildprojekt, Best-of) */
+.foto__studium-block { margin-bottom: 3rem; }
+.foto__studium-label {
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+/* Placeholder cards for upcoming photos */
+.foto__placeholder-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+@media (max-width: 600px) { .foto__placeholder-grid { grid-template-columns: 1fr; } }
+.foto__placeholder {
+  aspect-ratio: 4/3;
+  border-radius: var(--radius-lg);
+  background: var(--bg2);
+  border: 1px dashed var(--border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--muted);
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.foto__placeholder svg { opacity: 0.3; }
+
 /* ====================================================
    CONTACT
 ==================================================== */
