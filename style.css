@@ -876,40 +876,40 @@ ul { list-style: none; }
   margin-bottom: 2rem;
 }
 
-/* Studentisches Fach blocks (Abgaben, Freies Bildprojekt, Best-of) */
-.foto__studium-block { margin-bottom: 3rem; }
-.foto__studium-label {
-  font-size: 0.65rem;
-  font-weight: 500;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 1rem;
+/* Beschreibungstext pro Tab */
+.foto__tab-desc {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  max-width: 680px;
+  margin-bottom: 1.25rem;
 }
+.foto__tab-desc p { margin-bottom: 0.6rem; }
+.foto__tab-desc:empty { display: none !important; }
 
-/* Placeholder cards for upcoming photos */
-.foto__placeholder-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.25rem;
-}
-@media (max-width: 600px) { .foto__placeholder-grid { grid-template-columns: 1fr; } }
-.foto__placeholder {
-  aspect-ratio: 4/3;
-  border-radius: var(--radius-lg);
+/* Placeholder-Items (noch kein Bild vorhanden) */
+.foto__item--placeholder {
   background: var(--bg2);
   border: 1px dashed var(--border);
+  cursor: default;
+}
+.foto__item--placeholder:hover img { transform: none; }
+.foto__placeholder {
+  position: absolute;
+  inset: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
   color: var(--muted);
-  font-size: 0.8rem;
-  letter-spacing: 0.06em;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
+  text-align: center;
+  padding: 1rem;
 }
-.foto__placeholder svg { opacity: 0.3; }
+.foto__placeholder svg { opacity: 0.25; margin-bottom: 0.25rem; }
 
 /* ====================================================
    CONTACT

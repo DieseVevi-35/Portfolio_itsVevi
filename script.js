@@ -99,25 +99,41 @@
   revealEls.forEach((el) => observer.observe(el));
 })();
 
-/* ---- GALLERY TAB FILTER ---- */
+/* ---- GALLERY TAB FILTER (je Galerie unabhängig) ---- */
 (function () {
-  const tabs = document.querySelectorAll('.tab-btn');
-  const items = document.querySelectorAll('.foto__item');
+  document.querySelectorAll('.foto__tabs').forEach((tabGroup) => {
+    const key     = tabGroup.dataset.gallery;
+    const gallery = document.querySelector(`.foto__gallery[data-gallery="${key}"]`);
+    if (!gallery) return;
 
-  tabs.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      // Update active tab
-      tabs.forEach((t) => t.classList.remove('tab-btn--active'));
-      btn.classList.add('tab-btn--active');
+    const tabs  = tabGroup.querySelectorAll('.tab-btn');
+    const items = gallery.querySelectorAll('.foto__item');
+    const descs = document.querySelectorAll(`.foto__tab-desc[data-gallery="${key}"]`);
 
-      const filter = btn.dataset.tab;
-      items.forEach((item) => {
-        if (filter === 'all' || item.dataset.category === filter) {
-          item.classList.remove('hidden');
-          item.style.animation = 'fadeIn 0.4s ease forwards';
-        } else {
-          item.classList.add('hidden');
-        }
+    // Zeige beim Start nur die "all"-Beschreibung
+    descs.forEach((d) => { d.style.display = d.dataset.tab === 'all' ? '' : 'none'; });
+
+    tabs.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        tabs.forEach((t) => t.classList.remove('tab-btn--active'));
+        btn.classList.add('tab-btn--active');
+
+        const filter = btn.dataset.tab;
+
+        // Fotos filtern
+        items.forEach((item) => {
+          if (filter === 'all' || item.dataset.category === filter) {
+            item.classList.remove('hidden');
+            item.style.animation = 'fadeIn 0.4s ease forwards';
+          } else {
+            item.classList.add('hidden');
+          }
+        });
+
+        // Beschreibungen umschalten
+        descs.forEach((d) => {
+          d.style.display = d.dataset.tab === filter ? '' : 'none';
+        });
       });
     });
   });

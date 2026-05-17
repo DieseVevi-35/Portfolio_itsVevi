@@ -408,47 +408,97 @@
           <p>Für kleinere Unternehmungen und Spontanfotos nutze ich mein Handy (Huawei P30 mit Leica-Triple-Kamera oder Samsung A55) sowie teilweise auch meine Nikon Coolpix B500.</p>
         </div>
 
-        <!-- PRIVAT -->
+        <!-- ── PRIVAT ── -->
         <div class="foto__sub-section reveal-up delay-2">
           <h3 class="foto__sub-title">Privat</h3>
-          <div class="foto__tabs">
+          <div class="foto__sub-divider"></div>
+
+          <!-- Chips -->
+          <div class="foto__tabs" data-gallery="privat">
             <button class="tab-btn tab-btn--active" data-tab="all">Alle</button>
             <button class="tab-btn" data-tab="fussball">Fußball</button>
             <button class="tab-btn" data-tab="natur">Natur</button>
           </div>
-          <div class="foto__gallery" id="gallery-grid">
+
+          <!-- Beschreibung pro Chip (Text hier einfügen) -->
+          <div class="foto__tab-desc" data-gallery="privat" data-tab="all">
+            <!-- Allgemeiner Text, der bei "Alle" angezeigt wird — optional -->
+          </div>
+          <div class="foto__tab-desc" data-gallery="privat" data-tab="fussball">
+            <!-- Text zu den Fußball-Fotos hier einfügen -->
+          </div>
+          <div class="foto__tab-desc" data-gallery="privat" data-tab="natur">
+            <!-- Text zu den Natur-Fotos hier einfügen -->
+          </div>
+
+          <!-- Galerie -->
+          <div class="foto__gallery" data-gallery="privat">
             <figure class="foto__item" data-category="fussball">
               <img src="https://framerusercontent.com/images/7o8OCvcTySdyxfrKg6OH2VZIlQo.jpeg?scale-down-to=2048" alt="Fußball Fotografie" loading="lazy" />
               <figcaption>Fußball</figcaption>
             </figure>
             <figure class="foto__item" data-category="natur">
               <img src="https://ik.imagekit.io/Vevi/Portfolio/Nature/DSC_8321-min.JPG?updatedAt=1778406703692" alt="Sichelmond mit einem Flugzeug das darunter durchfliegt" loading="lazy" />
-              <figcaption>Natur</figcaption>
+              <figcaption>Sichelmond</figcaption>
+            </figure>
+            <figure class="foto__item" data-category="natur">
               <img src="https://ik.imagekit.io/Vevi/Portfolio/Nature/WhatsApp%20Image%202025-03-12%20at%2012.58.45.jpeg?updatedAt=1778406703766" alt="Astbergsee mit einer Bank im Vordergrund auf welcher Lieblingsplatz geschrieben steht." loading="lazy" />
-              <figcaption>Astbergsee mit Lieblingsplatzl</figcaption>
+              <figcaption>Astbergsee – Lieblingsplatzl</figcaption>
+            </figure>
+            <figure class="foto__item" data-category="natur">
               <img src="https://ik.imagekit.io/Vevi/Portfolio/Nature/WhatsApp%20Image%202025-03-12%20at%2012.58.44.jpeg?updatedAt=1778406703562" alt="Astbergsee mit dem Wilden Kaiser im Hintergrund" loading="lazy" />
-              <figcaption>Astbergsee mit Spiegelung des Wilden Kaisers</figcaption>
+              <figcaption>Astbergsee – Spiegelung des Wilden Kaisers</figcaption>
             </figure>
           </div>
         </div>
 
-        <!-- STUDENTISCHES FACH -->
+        <!-- ── STUDENTISCHES FACH ── -->
         <div class="foto__sub-section reveal-up">
           <h3 class="foto__sub-title">Studentisches Fach</h3>
+          <div class="foto__sub-divider"></div>
 
-          <div class="foto__studium-block reveal-up">
-            <h4 class="foto__studium-label">Abgaben</h4>
-            <p class="foto__placeholder">Titel und Inhalte folgen.</p>
+          <!-- Chips -->
+          <div class="foto__tabs" data-gallery="studium">
+            <button class="tab-btn tab-btn--active" data-tab="all">Alle</button>
+            <button class="tab-btn" data-tab="abgaben">Abgaben</button>
+            <button class="tab-btn" data-tab="freies-bildprojekt">Freies Bildprojekt</button>
+            <button class="tab-btn" data-tab="best-of">Best-of Semester</button>
           </div>
 
-          <div class="foto__studium-block reveal-up">
-            <h4 class="foto__studium-label">Freies Bildprojekt</h4>
-            <p class="foto__placeholder">Bilder und Text folgen.</p>
+          <!-- Beschreibung pro Chip (Text hier einfügen) -->
+          <div class="foto__tab-desc" data-gallery="studium" data-tab="all">
+            <!-- Allgemeiner Text, der bei "Alle" angezeigt wird — optional -->
+          </div>
+          <div class="foto__tab-desc" data-gallery="studium" data-tab="abgaben">
+            <!-- Text zu den Abgaben hier einfügen -->
+          </div>
+          <div class="foto__tab-desc" data-gallery="studium" data-tab="freies-bildprojekt">
+            <!-- Text zum Freien Bildprojekt hier einfügen -->
+          </div>
+          <div class="foto__tab-desc" data-gallery="studium" data-tab="best-of">
+            <!-- Text zu Best-of Semester hier einfügen -->
           </div>
 
-          <div class="foto__studium-block reveal-up">
-            <h4 class="foto__studium-label">Best-of Semester</h4>
-            <p class="foto__placeholder">Bilder und Text folgen.</p>
+          <!-- Galerie (Bilder folgen) -->
+          <div class="foto__gallery" data-gallery="studium">
+            <figure class="foto__item foto__item--placeholder" data-category="abgaben">
+              <div class="foto__placeholder">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                Abgaben – Bilder folgen
+              </div>
+            </figure>
+            <figure class="foto__item foto__item--placeholder" data-category="freies-bildprojekt">
+              <div class="foto__placeholder">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                Freies Bildprojekt – Bilder folgen
+              </div>
+            </figure>
+            <figure class="foto__item foto__item--placeholder" data-category="best-of">
+              <div class="foto__placeholder">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                Best-of Semester – Bilder folgen
+              </div>
+            </figure>
           </div>
         </div>
 
