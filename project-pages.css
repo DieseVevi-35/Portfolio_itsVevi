@@ -110,17 +110,17 @@
 /* Style cards — Phone aspect ratio, kein Cropping */
 .proj-style-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.25rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
 }
-@media (max-width: 500px) { .proj-style-grid { grid-template-columns: 1fr 1fr; gap: 0.75rem; } }
+@media (max-width: 700px) { .proj-style-grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; } }
 .proj-style-card {
   position: relative;
   border-radius: var(--radius);
   overflow: hidden;
   background: var(--bg2);
   cursor: zoom-in;
-  aspect-ratio: 9 / 19;         /* Smartphone-Hochformat */
+  aspect-ratio: 9 / 19;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -128,16 +128,16 @@
 .proj-style-card img {
   width: 100%;
   height: 100%;
-  object-fit: contain;          /* Kein Cropping */
+  object-fit: contain;
   display: block;
   transition: transform var(--transition);
 }
 .proj-style-card:hover img { transform: scale(1.03); }
 .proj-style-card span {
   position: absolute; bottom: 0; left: 0; right: 0;
-  padding: 0.6rem 0.75rem;
+  padding: 0.5rem 0.6rem;
   background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--text);
