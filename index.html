@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Vevi</title>
+  <meta name="description" content="Portfolio von Verena Ostermeier – UX Design Studentin, Fotografin, Head of Design" />
+  <meta property="og:title" content="Portfolio Vevi" />
+  <meta property="og:description" content="Portfolio von Verena Ostermeier" />
+  <meta property="og:url" content="https://www.itsvevi.de/" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="flipbook.css" />
+</head>
+<body>
+
+<script src="flipbook.js"></script>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#home" class="nav__logo">
+        <img src="https://framerusercontent.com/images/b9ZCE5JYeGoM2Pk2gWdWKbPfoY4.png" alt="Vevi Logo" />
+      </a>
+      <nav class="nav__links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#about-me">Über mich</a>
+        <div class="nav__dropdown">
+          <a href="#gallery" class="nav__dropdown-toggle">Studentische Projekte <span class="nav__dropdown-arrow">▾</span></a>
+          <ul class="nav__dropdown-menu">
+            <li><a href="screendesign.html">Screendesign</a></li>
+            <li><a href="icondesign.html">Icondesign</a></li>
+            <li><a href="drucker.html">Drucker</a></li>
+            <li><a href="jyoti.html">Konzept &amp; Design</a></li>
+          </ul>
+        </div>
+        <a href="#private-projekte">Private Projekte</a>
+        <a href="#social-media">Social Media</a>
+        <a href="#foto">Fotografie</a>
+      </nav>
+      <button class="nav__burger" id="burgerBtn" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile menu overlay -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu__close" id="mobileClose" aria-label="Menü schließen">✕</button>
+    <nav class="mobile-menu__links">
+      <a href="#home" class="mobile-link">Home</a>
+      <a href="#about-me" class="mobile-link">Über mich</a>
+      <div class="mobile-dropdown">
+        <button class="mobile-link mobile-dropdown__toggle">Studentische Projekte <span class="mobile-dropdown__arrow">▾</span></button>
+        <div class="mobile-dropdown__items" id="mobileSubLinks">
+          <a href="screendesign.html" class="mobile-sublink">Screendesign</a>
+          <a href="icondesign.html" class="mobile-sublink">Icondesign</a>
+          <a href="drucker.html" class="mobile-sublink">Drucker</a>
+          <a href="jyoti.html" class="mobile-sublink">Konzept &amp; Design</a>
+        </div>
+      </div>
+      <a href="#private-projekte" class="mobile-link">Private Projekte</a>
+      <a href="#social-media" class="mobile-link">Social Media</a>
+      <a href="#foto" class="mobile-link">Fotografie</a>
+    </nav>
+  </div>
+
+  <main>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="home">
+      <div class="hero__bg">
+        <img src="https://ik.imagekit.io/Vevi/Portfolio/Studium/Drawing" alt="Drawing_Storyboard" class="hero__portrait" />
+        <div class="hero__overlay"></div>
+      </div>
+      <div class="hero__content">
+        <p class="hero__greeting reveal-up delay-1">Hey!</p>
+        <h1 class="hero__title reveal-up delay-2">
+          Ich bin <em>Verena</em><br />oder: <span class="accent">Vevi</span>
+        </h1>
+        <p class="hero__sub reveal-up delay-3">
+          Willkommen auf meinem Portfolio! Hier finden sich alle wichtigen<br class="desktop-br" />
+          Informationen über mich und meine bisherigen Arbeiten.
+        </p>
+        <div class="hero__cta reveal-up delay-4">
+          <a href="#about-me" class="btn btn--primary">Mehr über mich</a>
+          <a href="#gallery" class="btn btn--ghost">Meine Arbeiten</a>
+        </div>
+      </div>
+      <div class="hero__scroll-hint">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="about section" id="about-me">
+      <div class="container">
+        <div class="section-label reveal-up">Über mich</div>
+        <div class="about__grid">
+          <div class="about__text reveal-up delay-1">
+            <h2 class="about__headline">
+              Ich bin Verena, 24 Jahre alt und derzeit als UX&#8209;Design (B.Sc.) Studentin an der Technischen Hochschule Ingolstadt immatrikuliert.
+            </h2>
+            <div class="about__body reveal-up delay-2">
+              <p>
+                Ich bin Hobby-Fotografin und bin auch in diesem Bereich ehrenamtlich im Fußballbereich aktiv. Des weiteren bin ich derzeit Vorstandsmitglied im Studentenverein „Hochschulgaming Ingolstadt e.V.".
+              </p>
+              <p>
+                Für das Studium hab ich mich entschieden, da ich ein Faible für benutzerfreundliche und „hübsch aussehende" Designs in jeglichen Applikationen habe.
+              </p>
+              <p>
+                Mein Weg zum Studium ist ziemlich außergewöhnlich. Warum? Das kann man meinem Lebenslauf entnehmen.
+              </p>
+            </div>
+            <div class="about__cv reveal-up delay-3">
+              <a href="https://framerusercontent.com/assets/aoTLAkrfBnKIbB0RiR0wrBbwAdM.pdf" class="btn btn--primary" target="_blank" download> <!--Lebenslauf Deutsch -->
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Lebenslauf – Deutsch
+              </a>
+              <a href="https://framerusercontent.com/assets/VfPUjR1lFQFQyMZmuW4cUgMo.pdf" class="btn btn--ghost" target="_blank" download> <!--CV - English -->
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Lebenslauf – Englisch
+              </a>
+            </div>
+            <p class="about__note reveal-up delay-4">
+              Wenn weitere Informationen, Empfehlungen oder Zeugnisse benötigt werden – zögern Sie nicht mich zu kontaktieren.
+            </p>
+          </div>
+          <div class="about__image reveal-right delay-2">
+            <div class="about__img-wrap">
+              <img src="https://framerusercontent.com/images/Gb1AB5aNs0Dhqt8QcOobWjQfUY.jpg?scale-down-to=1024" alt="Verena Ostermeier" />
+              <div class="about__img-deco"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== STUDENTISCHE PROJEKTE ===================== -->
+    <section class="projects section" id="gallery">
+      <div class="container">
+        <div class="section-label reveal-up">Studium</div>
+        <h2 class="projects__title reveal-up delay-1">Studentische Projekte</h2>
+
+      <section class="flipbook-section section" id="booklets">
+      <div class="container">
+      <div class="section-label">Booklets</div>
+      <h2 class="projects__title">Semester-Zusammenfassungen</h2>
+      <div class="flipbook-grid">
+        <div id="book1" data-flipbook="https://ik.imagekit.io/Vevi/Portfolio/Studium/Verena%20Ostermeier%20-%20Booklet%201.%20Semester.pdf?updatedAt=1778407117774"
+           data-title="1.Semester – UX Design"
+           data-tag="Zusammenfassung ine einem Booklet"
+           data-desc="Nutzerforschung, Prototyping, Usability">
+        </div>
+        <div id="book2" data-flipbook="https://ik.imagekit.io/Vevi/Portfolio/Studium/03_Booklet%20-%202.%20Semester%20%20-%20komprimiert.pdf?updatedAt=1778407212193"
+           data-title="Icondesign Booklet"
+           data-tag="UI Design"
+           data-desc="Kinder & One-Line Style">
+        </div>
+      </div>
+      </div>
+      </section>
+
+        <!-- Projekt 1: Screendesign App -->
+        <article class="project reveal-up delay-1">
+          <div class="project__header">
+            <h3 class="project__name">Screendesign – App</h3>
+            <span class="project__tag">1. Semester</span>
+            <span class="project__tag">Screen Design</span>
+          </div>
+          <div class="project__layout project__layout--right">
+            <div class="project__images">
+              <div class="project__style-grid">
+                <div class="style-card">
+                  <img src="https://framerusercontent.com/images/IfJc5o8cqPdDnirEYphRJ2InhY.png" alt="Original" />
+                  <span>Original</span>
+                </div>
+                <div class="style-card">
+                  <img src="https://framerusercontent.com/images/7i2QCDAvbE3nuopqDnM7VnyOK8.png" alt="Retro Futurism" />
+                  <span>Retro Futurism</span>
+                </div>
+                <div class="style-card">
+                  <img src="https://framerusercontent.com/images/UxjcoCgtYeL9xXJMrFvBHlPuEts.png" alt="Dark Mode" />
+                  <span>Dark Mode</span>
+                </div>
+                <div class="style-card">
+                  <img src="https://framerusercontent.com/images/Kkr3543Q5LXbzZV7M77x7kwE1O0.png" alt="Bauhaus" />
+                  <span>Bauhaus</span>
+                </div>
+              </div>
+            </div>
+            <div class="project__text">
+              <p>Die Aufgabe bestand darin, eine App in verschiedenen UI Stilen zu gestalten. Hierfür recherchierte ich erst die aktuellen Trends sowie auch eher außergewöhnliche Styles, dabei entschied ich mich für:</p>
+              <ul>
+                <li>Retro Futurism</li>
+                <li>Dark Mode</li>
+                <li>Bauhaus</li>
+              </ul>
+              <p>Zuerst erstellte ich zu jedem Stil ein Moodboard, suchte mir eine passende Applikation – welche ich zunächst in Illustrator nachgebaut habe – und passte schließlich das Screendesign den entsprechenden Stilen an.</p>
+              <a href="screendesign.html" class="project__link">Zum Projekt <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <div class="project-divider"></div>
+
+        <!-- Projekt 2: Icondesign -->
+        <article class="project reveal-up delay-2">
+          <div class="project__header">
+            <h3 class="project__name">Icondesign</h3>
+            <span class="project__tag">1. Semester</span>
+            <span class="project__tag">UI Design</span>
+          </div>
+          <div class="project__layout project__layout--left">
+            <div class="project__text">
+              <p>Die Aufgabe: das Gestalten von sieben Icons für eine Nachhaltigkeits-App. Es sollten zwei Sets erstellt werden, um zwei unterschiedliche Zielgruppen anzusprechen.</p>
+              <p>Die Größe, Position und Reihenfolge der Icons wurde festgelegt. Die Typographie musste an den Stil der Icons angepasst werden, damit es ein stimmiges Gesamtbild ergibt.</p>
+              <p>Zur Unterstützung bei der Ideenfindung fertigte ich einige grobe Skizzen an. Zudem erstellte ich Moodboards und arbeitete anschließend einige Icons aus. Hierbei fokussierte ich mich auf die, die mir am ehesten zusagten und auch verschiedene Stile darstellten.</p>
+              <p>Dadurch, dass die vorherigen Skizzen bereits schon einem Stil entsprechend in Illustrator angefertigt wurden, musste ich mich nur noch für einzelne Icons entscheiden und diese für eine App entsprechend aufbereiten – hierbei arbeitete ich den <strong>„Kinder" und „One-Line" Style</strong> aus.</p>
+              <a href="icondesign.html" class="project__link">Zum Projekt <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </div>
+            <div class="project__images">
+              <img src="https://framerusercontent.com/images/oWOzizxAvUJmtJ6ehSknXmC59o.png?scale-down-to=1024" alt="Icondesign Set 1" class="project__img project__img--main" />
+              <div class="project__img-row">
+                <img src="https://framerusercontent.com/images/1HEl3Y6gznwkYhzArRQk1Dr4dk.png?scale-down-to=512" alt="Icondesign Skizzen" class="project__img" />
+                <img src="https://framerusercontent.com/images/lc72TYgTUvbFzoRnFEGta3F9ryM.png" alt="Icondesign Ergebnis" class="project__img" />
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <div class="project-divider"></div>
+
+        <!-- Projekt 3: Drucker Redesign -->
+        <article class="project reveal-up delay-2">
+          <div class="project__header">
+            <h3 class="project__name">Screendesign – Redesign Drucker-Interface</h3>
+            <span class="project__tag">2. Semester</span>
+            <span class="project__tag">UX / Redesign</span>
+          </div>
+          <div class="project__layout project__layout--left">
+            <div class="project__text">
+              <p>In diesem Projekt ging es um das Redesign des THI-Drucker Interfaces.</p>
+              <p>Hierfür habe ich im ersten Schritt den originalen Screen nachgebaut. Beim Moodboard achtete ich vor allem auf die Zielgruppe: Studenten, Dozenten und Angestellte der THI – also überwiegend junge Menschen.</p>
+              <p>Dadurch kam ich schnell zum Ergebnis, dass das sogenannte <strong>„Glassmorphism"</strong>-UI perfekt zu dieser Zielgruppe passen würde.</p>
+              <p>Das Screendesign fertigte ich in Figma an. Um die Usability zu prüfen, baute ich auch hier einen Klick-Prototypen und führte im privaten Umfeld einige Usability-Tests durch.</p>
+              <a href="drucker.html" class="project__link">Zum Projekt <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </div>
+            <div class="project__images">
+              <img src="https://framerusercontent.com/images/Vj8TJgHLZL3if17ZJDfd6o3kIw.png?scale-down-to=512" alt="Drucker Original" class="project__img" />
+              <img src="https://framerusercontent.com/images/6BHQPKPx90wYy4CbJzFQZ2j0adc.png" alt="Drucker Redesign" class="project__img" />
+              <img src="https://framerusercontent.com/images/60RSMxda7Jhd3Cke8NvTFLPtJA.png" alt="Drucker Detail" class="project__img" />
+            </div>
+          </div>
+        </article>
+
+        <div class="project-divider"></div>
+
+        <!-- Projekt 4: Konzept & Design (Jyoti) -->
+        <article class="project reveal-up delay-1">
+          <div class="project__header">
+            <h3 class="project__name">Konzept- und Design-Entwicklung</h3>
+            <span class="project__tag">3. Semester</span>
+            <span class="project__tag">Konzept &amp; Design</span>
+          </div>
+          <div class="project__demenz">
+            <div class="project__demenz-intro">
+              <p class="project__demenz-question">Gruppenarbeit zum Thema: <em>„Wie kann moderne Technologie Menschen mit Demenz dabei unterstützen, eine gute Lebensqualität zu erreichen?"</em></p>
+              <div class="project__text">
+                <p>Wir starteten damit, uns mit dem Thema Demenz vertraut zu machen. Hierfür führten wir Interviews mit Personen aus dem Umfeld von an Demenz erkrankten Personen, nebenbei erfolgte eine ausführliche Internet-Recherche.</p>
+                <p>Nachdem wir uns im Team darauf verständigten, eine Applikation zur Unterstützung der pflegenden Familienangehörigen zu designen, starteten wir auch bereits mit der Konzeptionierung.</p>
+                <p>Wir entschieden uns bewusst für eine Kombination aus <strong>Wearable für den Alzheimer-Patienten</strong> sowie einer <strong>App für die Pflegeperson</strong>.</p>
+              </div>
+            </div>
+            <div class="project__demenz-phases">
+              <div class="phase-card">
+                <span class="phase-num">01</span>
+                <h4>Research</h4>
+                <div class="phase-imgs">
+                  <img src="https://framerusercontent.com/images/YUwTjyG0b2HhqvxICLM382Rox4.png" alt="Research" />
+                  <img src="https://framerusercontent.com/images/H5YliZavvtHz3x2PkXptVU4Ddvo.png" alt="Research 2" />
+                </div>
+              </div>
+              <div class="phase-card">
+                <span class="phase-num">02</span>
+                <h4>Personas &amp; User Journey</h4>
+                <img src="https://framerusercontent.com/images/TxZYi9FnL0BkKgYSvPuAwaS59UQ.png?scale-down-to=512" alt="Personas" />
+                <p>Um in unserem Projekt stets dem roten Faden zu folgen, kreierten wir unsere Personas und modellierten für diese auch die User Journey.</p>
+              </div>
+              <div class="phase-card">
+                <span class="phase-num">03</span>
+                <h4>Prototyping</h4>
+                <img src="https://framerusercontent.com/images/45Qmzjw8ANGagnuYJBOdkEjWgY.png?scale-down-to=512" alt="Paper Prototype" />
+                <p>Neben den Personas erstellten wir Paper Prototypes, übernahmen diese als Wireframes in Figma und starteten iterative User Testings.</p>
+              </div>
+              <div class="phase-card">
+                <span class="phase-num">04</span>
+                <h4>High-Fidelity</h4>
+                <div class="phase-imgs">
+                  <img src="https://framerusercontent.com/images/52IJ0Ev0jbhtDpNhRyn8SvPuAwaS59UQ.png" alt="HiFi 1" onerror="this.style.display='none'" />
+                  <img src="https://framerusercontent.com/images/aR0UCvMC7tQMGt3xm5DyHonT3T0.png" alt="HiFi 2" />
+                  <img src="https://framerusercontent.com/images/qN0twfBQ9scbe0KngsSySYKJMEk.png" alt="HiFi 3" />
+                </div>
+                <p>Dank Interviews, Recherche, Personas und User Tests wussten wir wie unser Ergebnis aussehen soll. Wir hielten alles im Styleguide fest und kamen somit zum fertigen High-Fidelity Prototype.</p>
+              </div>
+            </div>
+            <a href="jyoti.html" class="project__link" style="margin-top:1.5rem;display:inline-flex">Zum Projekt <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <div class="project__demenz-video">
+              <h4>Storyboard &amp; Produktfilm</h4>
+              <img src="https://framerusercontent.com/images/EMusmEEOECntNfeBeT5zPSofQ.jpg?scale-down-to=512" alt="Storyboard" class="storyboard-img" />
+              <div class="video-wrap">
+                <iframe
+                  src="https://www.youtube.com/embed/VhjEg8rbDY0?iv_load_policy=3&rel=0&modestbranding=1&playsinline=1"
+                  title="Jyoti Produktfilm"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+                </iframe>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===================== PRIVATE PROJEKTE ===================== -->
+    <section class="projects section" id="private-projekte">
+      <div class="container">
+        <div class="section-label reveal-up">Privat</div>
+        <h2 class="projects__title reveal-up delay-1">Private Projekte</h2>
+
+        <!-- Print Medien Design -->
+        <article class="project reveal-up delay-1">
+          <div class="project__header">
+            <h3 class="project__name">Print Medien Design</h3>
+            <span class="project__tag">Privates Projekt</span>
+            <span class="project__tag">Print Design</span>
+          </div>
+          <div class="project__layout project__layout--right">
+            <div class="project__images">
+              <img src="https://framerusercontent.com/images/ZRPPNDBB7Yw3DE4Id3MYqXnDwY.jpg?scale-down-to=2048" alt="Schlager Party Plakat" class="project__img print-img" />
+              <img src="https://framerusercontent.com/images/nEunv6elOH2UsBof6j2JcF2wCtA.jpg?scale-down-to=2048" alt="Eintrittskarten" class="project__img print-img" />
+            </div>
+            <div class="project__text">
+              <p>Für die Sportgaststätte „Zum Toni" durfte ich für eine Schlager Party das Plakat designen. Hierbei war es wichtig, dass das Design ein Eye-Catcher sein muss, aber nicht zu aufdringlich wirkt. Außerdem sollten alle relevanten Informationen auf möglichst einen Blick verarbeitet werden können.</p>
+              <p>Des weiteren sollte ich auch die Gestaltung der Eintrittskarten übernehmen. Dabei blieb ich natürlich dem Design treu und stellte die Informationen wie auf den weitverbreiteten Eventim-Tickets dar – zur Unterstützung der schnellen Informationsverarbeitung aufgrund des bekannten Layouts.</p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===================== SOCIAL MEDIA ===================== -->
+    <section class="social-media section" id="social-media">
+      <div class="container">
+        <div class="section-label reveal-up">Social Media</div>
+        <h2 class="projects__title reveal-up delay-1">Social Media Managerin</h2>
+
+        <div class="social-grid">
+          <div class="social-card reveal-up delay-2">
+            <div class="social-card__text">
+              <h3>TSV Etting – Fußball</h3>
+              <p>Für den <a href="https://instagram.com/tsvetting" target="_blank" rel="noopener">TSV Etting</a> (Abt. Fußball) bin ich seit 2019 als Fotografin und seit 2022 als Social Media Managerin tätig. Hierbei benutze ich die während der Spiele geschossenen Fotos für die Ergebnis-Posts, auch die Mannschafts- und Spielerfotos sowie die Bearbeitung dieser fällt in meinen Aufgabenbereich.</p>
+            </div>
+            <div class="social-card__embed">
+              <iframe
+                src="https://www.instagram.com/p/DB3mAgTqjGk/embed/"
+                frameborder="0"
+                scrolling="no"
+                allowtransparency="true"
+                title="TSV Etting Instagram Post">
+              </iframe>
+            </div>
+          </div>
+
+          <div class="social-card reveal-up delay-3">
+            <div class="social-card__text">
+              <h3>Hochschulgaming Ingolstadt e.V.</h3>
+              <p>Beim <a href="https://instagram.com/hochschulgaming_in" target="_blank" rel="noopener">Studentenverein Hochschulgaming Ingolstadt e.V.</a> bin ich seit 2023 Mitglied, seit 10/2023 Head of Design und seit 10/2024 Vorstandsmitglied. In diesen Rollen bin ich sowohl als Mitorganisatorin für diverse online und offline Events tätig, aber auch für die Content-Gestaltung für Instagram sowie die Overlay-Gestaltung auf der Streaming-Plattform Twitch.</p>
+            </div>
+            <div class="social-card__embed">
+              <iframe
+                src="https://www.instagram.com/p/DC_xIcetNcZ/embed/"
+                frameborder="0"
+                scrolling="no"
+                allowtransparency="true"
+                title="Hochschulgaming Instagram Post">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FOTOGRAFIE ===================== -->
+    <section class="foto section" id="foto">
+      <div class="container">
+        <div class="section-label reveal-up">Fotografie</div>
+        <h2 class="projects__title reveal-up delay-1">Meine Fotos</h2>
+        <div class="foto__intro reveal-up delay-2">
+          <p>Zum fotografieren nutze ich meine (spiegellose) <strong>Nikon Z50</strong> mit den Objektiven DX 16-50mm/3,5-6,3 VR und DX 50-250mm/4,5-6,3 VR.</p>
+          <p>Für kleinere Unternehmungen und Spontanfotos nutze ich mein Handy (Huawei P30 mit Leica-Triple-Kamera oder Samsung A55) sowie teilweise auch meine Nikon Coolpix B500.</p>
+        </div>
+
+        <!-- ── PRIVAT ── -->
+        <div class="foto__sub-section reveal-up delay-2">
+          <h3 class="foto__sub-title">Privat</h3>
+          <div class="foto__sub-divider"></div>
+
+          <!-- Chips -->
+          <div class="foto__tabs" data-gallery="privat">
+            <button class="tab-btn tab-btn--active" data-tab="all">Alle</button>
+            <button class="tab-btn" data-tab="fussball">Fußball</button>
+            <button class="tab-btn" data-tab="natur">Natur</button>
+          </div>
+
+          <!-- Beschreibung pro Chip (Text hier einfügen) -->
+          <div class="foto__tab-desc" data-gallery="privat" data-tab="all">
+            <!-- Allgemeiner Text, der bei "Alle" angezeigt wird — optional -->
+          </div>
+          <div class="foto__tab-desc" data-gallery="privat" data-tab="fussball">
+            <!-- Text zu den Fußball-Fotos hier einfügen -->
+          </div>
+          <div class="foto__tab-desc" data-gallery="privat" data-tab="natur">
+            <!-- Text zu den Natur-Fotos hier einfügen -->
+          </div>
+
+          <!-- Galerie -->
+          <div class="foto__gallery" data-gallery="privat">
+            <figure class="foto__item" data-category="fussball">
+              <img src="https://framerusercontent.com/images/7o8OCvcTySdyxfrKg6OH2VZIlQo.jpeg?scale-down-to=2048" alt="Fußball Fotografie" loading="lazy" />
+              <figcaption>Fußball</figcaption>
+            </figure>
+            <figure class="foto__item" data-category="natur">
+              <img src="https://ik.imagekit.io/Vevi/Portfolio/Nature/DSC_8321-min.JPG?updatedAt=1778406703692" alt="Sichelmond mit einem Flugzeug das darunter durchfliegt" loading="lazy" />
+              <figcaption>Sichelmond</figcaption>
+            </figure>
+            <figure class="foto__item" data-category="natur">
+              <img src="https://ik.imagekit.io/Vevi/Portfolio/Nature/WhatsApp%20Image%202025-03-12%20at%2012.58.45.jpeg?updatedAt=1778406703766" alt="Astbergsee mit einer Bank im Vordergrund auf welcher Lieblingsplatz geschrieben steht." loading="lazy" />
+              <figcaption>Astbergsee – Lieblingsplatzl</figcaption>
+            </figure>
+            <figure class="foto__item" data-category="natur">
+              <img src="https://ik.imagekit.io/Vevi/Portfolio/Nature/WhatsApp%20Image%202025-03-12%20at%2012.58.44.jpeg?updatedAt=1778406703562" alt="Astbergsee mit dem Wilden Kaiser im Hintergrund" loading="lazy" />
+              <figcaption>Astbergsee – Spiegelung des Wilden Kaisers</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <!-- ── STUDENTISCHES FACH ── -->
+        <div class="foto__sub-section reveal-up">
+          <h3 class="foto__sub-title">Studentisches Fach</h3>
+          <div class="foto__sub-divider"></div>
+
+          <!-- Chips -->
+          <div class="foto__tabs" data-gallery="studium">
+            <button class="tab-btn tab-btn--active" data-tab="all">Alle</button>
+            <button class="tab-btn" data-tab="abgaben">Abgaben</button>
+            <button class="tab-btn" data-tab="freies-bildprojekt">Freies Bildprojekt</button>
+            <button class="tab-btn" data-tab="best-of">Best-of Semester</button>
+          </div>
+
+          <!-- Beschreibung pro Chip (Text hier einfügen) -->
+          <div class="foto__tab-desc" data-gallery="studium" data-tab="all">
+            <!-- Allgemeiner Text, der bei "Alle" angezeigt wird — optional -->
+          </div>
+          <div class="foto__tab-desc" data-gallery="studium" data-tab="abgaben">
+            <!-- Text zu den Abgaben hier einfügen -->
+          </div>
+          <div class="foto__tab-desc" data-gallery="studium" data-tab="freies-bildprojekt">
+            <!-- Text zum Freien Bildprojekt hier einfügen -->
+          </div>
+          <div class="foto__tab-desc" data-gallery="studium" data-tab="best-of">
+            <!-- Text zu Best-of Semester hier einfügen -->
+          </div>
+
+          <!-- Galerie (Bilder folgen) -->
+          <div class="foto__gallery" data-gallery="studium">
+            <figure class="foto__item foto__item--placeholder" data-category="abgaben">
+              <div class="foto__placeholder">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                Abgaben – Bilder folgen
+              </div>
+            </figure>
+            <figure class="foto__item foto__item--placeholder" data-category="freies-bildprojekt">
+              <div class="foto__placeholder">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                Freies Bildprojekt – Bilder folgen
+              </div>
+            </figure>
+            <figure class="foto__item foto__item--placeholder" data-category="best-of">
+              <div class="foto__placeholder">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                Best-of Semester – Bilder folgen
+              </div>
+            </figure>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="contact section" id="contact">
+      <div class="container">
+        <div class="section-label reveal-up">Kontakt</div>
+        <h2 class="contact__title reveal-up delay-1">Let's connect.</h2>
+        <div class="contact__grid reveal-up delay-2">
+          <a href="mailto:verena@itsvevi.de" class="contact__card">
+            <div class="contact__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div class="contact__info">
+              <span class="contact__label">Mail</span>
+              <span class="contact__value">verena(at)itsvevi.de</span>
+            </div>
+          </a>
+          <a href="tel:+4915153970123" class="contact__card">
+            <div class="contact__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.0,2.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9a16 16 0 006.72 6.72l2.64-1.31a2 2 0 012.18.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <div class="contact__info">
+              <span class="contact__label">Telefon</span>
+              <span class="contact__value">+49 1515 3970123</span>
+            </div>
+          </a>
+          <div class="contact__card contact__card--no-link">
+            <div class="contact__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="contact__info">
+              <span class="contact__label">Adresse</span>
+              <span class="contact__value">Hauptstraße 21B, 85120 Hepberg</span>
+            </div>
+          </div>
+          <a href="https://www.linkedin.com/in/verena-o-879771339" target="_blank" rel="noopener" class="contact__card">
+            <div class="contact__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </div>
+            <div class="contact__info">
+              <span class="contact__label">LinkedIn</span>
+              <span class="contact__value">Verena Ostermeier</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <img src="https://framerusercontent.com/images/b9ZCE5JYeGoM2Pk2gWdWKbPfoY4.png" alt="Vevi Logo" class="footer__logo" />
+        <p>© Verena Ostermeier | 2026</p>
+        <nav class="footer__links">
+          <a href="#home">Home</a>
+          <a href="#about-me">Über mich</a>
+          <a href="#gallery">Gallerie</a>
+          <a href="#contact">Kontakt</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+    <button class="lightbox__close" id="lightboxClose" aria-label="Schließen">✕</button>
+    <button class="lightbox__prev" id="lightboxPrev" aria-label="Vorheriges Bild">‹</button>
+    <button class="lightbox__next" id="lightboxNext" aria-label="Nächstes Bild">›</button>
+    <div class="lightbox__content">
+      <img src="" alt="" id="lightboxImg" />
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
