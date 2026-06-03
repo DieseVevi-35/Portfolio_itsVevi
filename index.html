@@ -90,10 +90,6 @@
           <a href="#gallery" class="btn btn--ghost">Meine Arbeiten</a>
         </div>
       </div>
-      <div class="hero__scroll-hint">
-        <span>Scroll</span>
-        <div class="scroll-line"></div>
-      </div>
     </section>
 
     <!-- ===================== ABOUT ===================== -->
@@ -579,6 +575,82 @@
     </div>
   </div>
 
+  <!-- ===================== PROJECT OVERLAY ===================== -->
+  <div class="proj-overlay" id="projOverlay" aria-modal="true" role="dialog">
+    <div class="proj-overlay__bar">
+      <button class="proj-overlay__close" id="projOverlayClose" aria-label="Schließen">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        Schließen
+      </button>
+      <span class="proj-overlay__title" id="projOverlayTitle"></span>
+    </div>
+    <div class="proj-overlay__body" id="projOverlayBody">
+      <div class="proj-overlay__loader">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+  <div class="proj-overlay__backdrop" id="projOverlayBackdrop"></div>
+
   <script src="script.js"></script>
+  <script>
+    (function() {
+      const overlay   = document.getElementById('projOverlay');
+      const body      = document.getElementById('projOverlayBody');
+      const titleEl   = document.getElementById('projOverlayTitle');
+      const closeBtn  = document.getElementById('projOverlayClose');
+      const backdrop  = document.getElementById('projOverlayBackdrop');
+
+      function openOverlay(href, label) {
+        document.body.style.overflow = 'hidden';
+        overlay.classList.add('is-open');
+        backdrop.classList.add('is-visible');
+        titleEl.textContent = label || '';
+        body.innerHTML = '<div class="proj-overlay__loader"><span></span><span></span><span></span></div>';
+
+        fetch(href)
+          .then(r => r.text())
+          .then(html => {
+            const parser  = new DOMParser();
+            const doc     = parser.parseFromString(html, 'text/html');
+            const main    = doc.querySelector('main') || doc.body;
+            // strip nav / header / footer from loaded page
+            main.querySelectorAll('header, nav, footer, .nav, .footer').forEach(el => el.remove());
+            body.innerHTML = main.innerHTML;
+            body.scrollTop = 0;
+            // re-run any reveal animations
+            body.querySelectorAll('.reveal-up, .reveal-right').forEach(el => {
+              el.classList.add('visible');
+            });
+          })
+          .catch(() => {
+            body.innerHTML = '<p style="padding:3rem;color:var(--muted)">Seite konnte nicht geladen werden.</p>';
+          });
+      }
+
+      function closeOverlay() {
+        overlay.classList.remove('is-open');
+        backdrop.classList.remove('is-visible');
+        document.body.style.overflow = '';
+        setTimeout(() => { body.innerHTML = ''; }, 400);
+      }
+
+      // intercept all .project__link clicks
+      document.querySelectorAll('.project__link').forEach(a => {
+        a.addEventListener('click', function(e) {
+          e.preventDefault();
+          const href  = this.getAttribute('href');
+          // derive a label from the nearest project name
+          const article = this.closest('article, .project');
+          const nameEl  = article && article.querySelector('.project__name, h3');
+          openOverlay(href, nameEl ? nameEl.textContent.trim() : '');
+        });
+      });
+
+      closeBtn.addEventListener('click', closeOverlay);
+      backdrop.addEventListener('click', closeOverlay);
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') closeOverlay(); });
+    })();
+  </script>
 </body>
 </html>
