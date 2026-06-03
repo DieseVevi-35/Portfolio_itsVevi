@@ -1,0 +1,32 @@
+name: Deploy Staging
+
+on:
+  push:
+    branches:
+      - staging
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Inject staging banner
+        run: |
+          for file in *.html; do
+            sed -i 's|</body>|<div id="staging-banner" style="position:fixed;bottom:0;left:0;right:0;background:#ff6b35;color:#fff;text-align:center;padding:8px 16px;font-family:sans-serif;font-size:13px;z-index:9999;letter-spacing:.05em;">STAGING – Nicht die Live-Website &nbsp;|&nbsp; <a href="https://itsvevi.de" style="color:#fff;text-decoration:underline;">Zur Live-Site</a></div></body>|g' "$file"
+          done
+
+      - name: Deploy to GitHub Pages (staging subfolder)
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
+          publish_branch: gh-pages
+          destination_dir: staging
+          exclude_assets: '.github,README.md,CNAME'
+          keep_files: true
