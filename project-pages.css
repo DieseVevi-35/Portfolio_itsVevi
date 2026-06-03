@@ -103,7 +103,7 @@
 .proj-phases {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+  gap: 2.5rem;
 }
 @media (max-width: 640px) { .proj-phases { grid-template-columns: 1fr; } }
 
