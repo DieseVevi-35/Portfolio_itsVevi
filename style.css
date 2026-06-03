@@ -1193,3 +1193,84 @@ a.contact__card:hover {
   0%, 80%, 100% { transform: scale(0.6); opacity: 0.3; }
   40%            { transform: scale(1);   opacity: 1; }
 }
+
+/* ====================================================
+   PROJEKT-GRID (Hauptseite – Karten)
+==================================================== */
+.proj-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  margin-top: 3rem;
+}
+.proj-grid--single {
+  grid-template-columns: 1fr;
+  max-width: 600px;
+}
+
+.proj-card {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg2);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* clickable cards get pointer, non-clickable don't need it */
+a.proj-card { cursor: pointer; }
+
+.proj-card__img-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--bg3);
+}
+.proj-card__img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+a.proj-card:hover .proj-card__img-wrap img {
+  transform: scale(1.04);
+}
+
+/* subtle overlay on hover */
+.proj-card__img-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0);
+  transition: background 0.4s ease;
+}
+a.proj-card:hover .proj-card__img-wrap::after {
+  background: rgba(0,0,0,0.15);
+}
+
+.proj-card__info {
+  padding: 1.25rem 1.5rem 1.5rem;
+  border-top: 1px solid var(--border);
+}
+.proj-card__tag {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.4rem;
+}
+.proj-card__name {
+  font-family: var(--ff-display);
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-weight: 400;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+@media (max-width: 640px) {
+  .proj-grid { grid-template-columns: 1fr; }
+  .proj-grid--single { max-width: 100%; }
+}
