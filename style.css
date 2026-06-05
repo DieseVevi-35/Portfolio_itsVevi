@@ -789,7 +789,7 @@ ul { list-style: none; }
 ==================================================== */
 .foto { background: var(--bg); }
 .foto__intro {
-  max-width: 680px;
+  /* max-width: 680px; */
   margin-bottom: 3rem;
 }
 .foto__intro p { color: var(--muted); margin-bottom: 0.75rem; font-size: 0.95rem; }
@@ -881,7 +881,7 @@ ul { list-style: none; }
   color: var(--muted);
   font-size: 0.95rem;
   line-height: 1.8;
-  max-width: 680px;
+  /* max-width: 680px; */
   margin-bottom: 1.25rem;
 }
 .foto__tab-desc p { margin-bottom: 0.6rem; }
