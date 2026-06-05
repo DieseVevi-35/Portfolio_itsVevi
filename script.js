@@ -5,6 +5,7 @@
 /* ---- NAV: scroll state + active links ---- */
 (function () {
   const nav = document.getElementById('nav');
+  if (!nav) return;
   const links = document.querySelectorAll('.nav__links a');
   const sections = document.querySelectorAll('section[id]');
 
@@ -37,6 +38,7 @@
   const burger = document.getElementById('burgerBtn');
   const menu   = document.getElementById('mobileMenu');
   const close  = document.getElementById('mobileClose');
+  if (!burger || !menu || !close) return;
   const mLinks = document.querySelectorAll('.mobile-link:not(.mobile-dropdown__toggle)');
 
   function openMenu() {
