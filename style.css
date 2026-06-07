@@ -889,6 +889,13 @@ ul { list-style: none; }
 .foto__tab-desc p { margin-bottom: 0.6rem; }
 .foto__tab-desc:empty { display: none !important; }
 
+.foto__select-hint {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-style: italic;
+  padding: 2rem 0 1rem;
+}
+
 /* Placeholder-Items (noch kein Bild vorhanden) */
 .foto__item--placeholder {
   background: var(--bg2);

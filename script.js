@@ -112,8 +112,15 @@
     const items = gallery.querySelectorAll('.foto__item');
     const descs = document.querySelectorAll(`.foto__tab-desc[data-gallery="${key}"]`);
 
-    // Zeige beim Start nur die "all"-Beschreibung
-    descs.forEach((d) => { d.style.display = d.dataset.tab === 'all' ? '' : 'none'; });
+    // Alle Bilder und Beschreibungen beim Start verstecken
+    items.forEach((item) => item.classList.add('hidden'));
+    descs.forEach((d) => { d.style.display = 'none'; });
+
+    // Hinweistext einfügen
+    const hint = document.createElement('p');
+    hint.className = 'foto__select-hint';
+    hint.textContent = 'Wähle eine Kategorie aus, um die Fotos zu sehen.';
+    gallery.before(hint);
 
     tabs.forEach((btn) => {
       btn.addEventListener('click', () => {
@@ -122,9 +129,12 @@
 
         const filter = btn.dataset.tab;
 
+        // Hinweis ausblenden sobald eine Kategorie gewählt wurde
+        hint.style.display = 'none';
+
         // Fotos filtern
         items.forEach((item) => {
-          if (filter === 'all' || item.dataset.category === filter) {
+          if (item.dataset.category === filter) {
             item.classList.remove('hidden');
             item.style.animation = 'fadeIn 0.4s ease forwards';
           } else {
